@@ -1,0 +1,25 @@
+Project: Zinverwantschapspel / GitHub Pages
+Datum: 2026-04-08
+Tijdzone: Europe/Amsterdam
+
+Samenvatting van verzoeken
+- User wilde publicatie via GitHub.
+- GitHub username vastgesteld als: kruin.
+- Aangeleverde bron was een losse React-component in JSX.
+- Doel: maak hiervan een GitHub Pages-klare projectstructuur.
+
+Uitgevoerde wijzigingen
+- Nieuwe Vite/React projectstructuur gemaakt.
+- Oorspronkelijke componentlogica omgezet naar een standalone `src/App.jsx`.
+- Afhankelijkheden op `@/components/ui/*` en `lucide-react` verwijderd.
+- Styling vervangen door eigen CSS in `src/styles.css`.
+- `vite.config.js` ingesteld voor repositorypad `/zinverwantschap-spel/`.
+- GitHub Actions workflow toegevoegd voor automatische Pages-deploy.
+- `public/.nojekyll` toegevoegd.
+- README met exacte publicatiestappen toegevoegd.
+
+Verwachte repo
+- https://github.com/kruin/zinverwantschap-spel
+
+Verwachte Pages-URL
+- https://kruin.github.io/zinverwantschap-spel/

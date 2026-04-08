@@ -1,0 +1,419 @@
+:root {
+  color-scheme: light;
+  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  background: #f3f6fb;
+  color: #162033;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  margin: 0;
+  min-height: 100%;
+}
+
+body {
+  min-height: 100vh;
+}
+
+button,
+input,
+textarea {
+  font: inherit;
+}
+
+code {
+  background: #e9eef7;
+  border-radius: 0.35rem;
+  padding: 0.08rem 0.35rem;
+}
+
+.app-shell {
+  min-height: 100vh;
+  padding: 1rem;
+  background: linear-gradient(180deg, #f4f7fb 0%, #eef2f8 100%);
+}
+
+.app-grid {
+  max-width: 1320px;
+  margin: 0 auto;
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: minmax(0, 2fr) minmax(320px, 420px);
+}
+
+.main-column,
+.side-column {
+  min-width: 0;
+}
+
+.panel {
+  background: #ffffff;
+  border: 1px solid #d9e1ee;
+  border-radius: 1rem;
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.06);
+  overflow: hidden;
+}
+
+.panel + .panel {
+  margin-top: 1.5rem;
+}
+
+.panel-header {
+  padding: 1rem 1.25rem;
+  border-bottom: 1px solid #e4eaf3;
+}
+
+.panel-header h2 {
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+.panel-body {
+  padding: 1.25rem;
+}
+
+.game-layout {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.player-column {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.player-column h3 {
+  margin: 0;
+  font-size: 1.05rem;
+}
+
+.stack-list {
+  display: grid;
+  gap: 0.5rem;
+}
+
+.stack-gap {
+  display: grid;
+  gap: 0.85rem;
+}
+
+.full-width {
+  width: 100%;
+}
+
+.confirm-button {
+  align-self: flex-start;
+}
+
+.meaning-card {
+  border: 2px solid #162033;
+  border-radius: 1rem;
+  background: #fbfcff;
+  text-align: center;
+  padding: 1.75rem 1rem;
+}
+
+.meaning-label {
+  color: #5b6679;
+  font-size: 0.95rem;
+}
+
+.meaning-text {
+  margin-top: 0.6rem;
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+
+.player-two-column {
+  border-top: 1px solid #e4eaf3;
+  padding-top: 1.5rem;
+}
+
+.field-label {
+  font-size: 0.92rem;
+  color: #475267;
+}
+
+.word-display {
+  font-size: 1.35rem;
+  font-weight: 700;
+}
+
+.tip-box {
+  display: grid;
+  gap: 0.85rem;
+  padding: 1rem;
+  border-radius: 0.9rem;
+  border: 1px solid #d9e1ee;
+  background: #f7f9fc;
+}
+
+.mono-large {
+  font-family: "Consolas", "Menlo", monospace;
+  font-size: 1.05rem;
+  margin-top: 0.25rem;
+}
+
+.muted-text {
+  color: #4d5a70;
+}
+
+.player-two-controls {
+  display: grid;
+  gap: 0.9rem;
+}
+
+.text-input,
+.data-textarea {
+  width: 100%;
+  border: 1px solid #c9d3e5;
+  border-radius: 0.8rem;
+  padding: 0.85rem 1rem;
+  background: #fff;
+  color: #162033;
+}
+
+.text-input {
+  font-family: "Consolas", "Menlo", monospace;
+  font-size: 1.3rem;
+}
+
+.text-input:disabled,
+.data-textarea:disabled,
+.button:disabled,
+.icon-button:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+.data-textarea {
+  min-height: 320px;
+  resize: vertical;
+  font-family: "Consolas", "Menlo", monospace;
+  font-size: 0.95rem;
+}
+
+.edit-window {
+  border: 1px solid #d9e1ee;
+  border-radius: 0.9rem;
+  padding: 1rem;
+  background: #fff;
+}
+
+.edit-window-title {
+  margin-bottom: 0.8rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+.wheel-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.75rem;
+}
+
+.wheel-slot {
+  border: 1px solid #d2dbea;
+  border-radius: 0.85rem;
+  padding: 0.8rem;
+  background: #fff;
+  min-width: 0;
+}
+
+.wheel-slot-anchor {
+  border-width: 2px;
+  border-color: #162033;
+  background: #f3f6fb;
+}
+
+.wheel-slot-wide {
+  min-width: 0;
+}
+
+.wheel-slot-label {
+  margin-bottom: 0.45rem;
+  color: #5b6679;
+  text-align: center;
+  font-size: 0.75rem;
+}
+
+.wheel-slot-controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.wheel-slot-value {
+  min-width: 2.2rem;
+  text-align: center;
+  font-family: "Consolas", "Menlo", monospace;
+  font-size: 1.15rem;
+  font-weight: 700;
+}
+
+.wheel-slot-value-anchor {
+  min-height: 46px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.button,
+.icon-button {
+  border: 1px solid transparent;
+  border-radius: 0.75rem;
+  transition: background 0.15s ease, border-color 0.15s ease, color 0.15s ease, transform 0.05s ease;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.45rem;
+  min-height: 44px;
+  padding: 0.72rem 1rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.button:active,
+.icon-button:active {
+  transform: translateY(1px);
+}
+
+.button-primary {
+  background: #1f4ed8;
+  color: white;
+}
+
+.button-primary:hover:not(:disabled) {
+  background: #183fb0;
+}
+
+.button-secondary {
+  background: white;
+  border-color: #c9d3e5;
+  color: #162033;
+}
+
+.button-secondary:hover:not(:disabled),
+.icon-button:hover:not(:disabled) {
+  background: #f3f6fb;
+  border-color: #9db0cf;
+}
+
+.icon-button {
+  width: 38px;
+  height: 38px;
+  background: white;
+  border-color: #c9d3e5;
+  cursor: pointer;
+}
+
+.button-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+}
+
+.feedback {
+  border-radius: 0.9rem;
+  padding: 1rem;
+  border: 1px solid;
+}
+
+.feedback-correct {
+  background: #ebfaef;
+  border-color: #a6dfb4;
+}
+
+.feedback-wrong {
+  background: #fff1f1;
+  border-color: #f1b9b9;
+}
+
+.feedback-title {
+  font-size: 1.05rem;
+  font-weight: 700;
+}
+
+.feedback-text {
+  margin-top: 0.35rem;
+  color: #334155;
+}
+
+.warning-text,
+.error-text {
+  color: #b42318;
+}
+
+.tests-list {
+  display: grid;
+  gap: 0.65rem;
+}
+
+.test-item {
+  border-radius: 0.75rem;
+  border: 1px solid;
+  padding: 0.75rem 0.85rem;
+  font-size: 0.95rem;
+}
+
+.test-item-pass {
+  background: #ebfaef;
+  border-color: #a6dfb4;
+}
+
+.test-item-fail {
+  background: #fff1f1;
+  border-color: #f1b9b9;
+}
+
+@media (max-width: 980px) {
+  .app-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 700px) {
+  .app-shell {
+    padding: 0.75rem;
+  }
+
+  .panel-body,
+  .panel-header {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .meaning-text {
+    font-size: 1.3rem;
+  }
+
+  .wheel-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .button,
+  .icon-button {
+    width: 100%;
+  }
+
+  .button-row {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .wheel-slot-controls {
+    gap: 0.8rem;
+  }
+}
